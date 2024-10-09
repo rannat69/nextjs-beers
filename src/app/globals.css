@@ -40,3 +40,48 @@ a {
     color-scheme: dark;
   }
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 95vh; /* Ensure it takes the full height of the viewport */
+}
+
+.content {
+  flex: 1; /* Take up remaining space, pushing pagination to the bottom */
+  display: flex;
+  flex-direction: column;
+}
+
+.beer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Default: 4 columns */
+  gap: 16px; /* Space between items */
+  
+  overflow: hidden; /* Hide overflow items */
+}
+
+.beer-item {
+  border: 1px solid #ccc; /* Optional: add border */
+  padding: 10px; /* Optional: add padding */
+  text-align: center; /* Center align text */
+}
+
+/* Media query for screens less than 800px */
+@media (max-width: 800px) {
+  .beer-grid {
+    grid-template-columns: repeat(3, 1fr); /* Change to 3 columns */
+  }
+}
+
+/* Media query for screens less than 500px */
+@media (max-width: 500px) {
+  .beer-grid {
+    grid-template-columns: repeat(2, 1fr); /* Change to 2 columns */
+  }
+}
+
+.pagination {
+  margin-top: auto; /* Push the pagination to the bottom */
+  padding: 10px; /* Optional: add some padding */
+}

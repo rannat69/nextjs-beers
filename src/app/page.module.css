@@ -158,6 +158,11 @@ a.secondary {
   }
 }
 
+.title {
+  font-size: large;
+  font-weight: bold;
+}
+
 @media (prefers-color-scheme: dark) {
   .logo {
     filter: invert();
